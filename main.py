@@ -38,7 +38,7 @@ def get_meps():
 
 def get_mep_by_id(id):
     mep_db = get_db("meps")
-    mep = mep_db.meps.find_one({'_id':bson.ObjectId(oid=str(id))}, {"_id":1, "Name.full" :1, "cases":1})
+    mep = mep_db.meps.find_one({'_id':bson.ObjectId(oid=str(id))}, {"_id":1, "Name.full" :1, "cases":1,'iccsj':1})
     return mep
 
 @bottle.route('/')
