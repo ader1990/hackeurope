@@ -106,7 +106,7 @@ class Just(object):
         #print post
  #       print info
         mep["cases"] = []
-        mep["cases"].append(info)
+        mep["cases"] = info
         #print post
 #        print mep
         mep_db.meps.update({'Name.full':mep_name}, mep, upsert = False)
